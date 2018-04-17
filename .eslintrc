@@ -1,0 +1,21 @@
+{
+    "extends": ["standard", "standard-react"],
+    "env": {
+        "es6": true,
+        "node": true,
+        "browser": true,
+        "mocha": true,
+        "jquery": true
+    },
+    "rules": {
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "semi": ["error", "always"],
+        "no-var": ["error"],
+        "quotes": ["error"],
+        "curly": ["error", "all"],
+        "no-useless-computed-key": ["error"],
+        "dot-notation": ["error"],
+        "react/jsx-indent": ["never"],
+        "react/jsx-indent-props": ["never"]
+    }
+}
