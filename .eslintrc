@@ -16,6 +16,7 @@
         "no-useless-computed-key": ["error"],
         "dot-notation": ["error"],
         "react/jsx-indent": ["never"],
-        "react/jsx-indent-props": ["never"]
+        "react/jsx-indent-props": ["never"],
+        "react/jsx-uses-vars": [2]
     }
 }

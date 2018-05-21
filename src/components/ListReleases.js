@@ -1,10 +1,7 @@
 // https://api.discogs.com/users/willwill_/collection/folders/0/releases
 
 import React, {Component} from 'react';
-import List from 'material-ui/List';
-import ListItem from 'material-ui/List/ListItem';
-import FontIcon from 'material-ui/FontIcon';
-import CircularProgress from 'material-ui/CircularProgress';
+import {List, ListItem, ListItemText, FontIcon, CircularProgress} from '@material-ui/core';
 import axios from 'axios';
 
 class ListReleases extends Component {
@@ -34,22 +31,22 @@ class ListReleases extends Component {
 			return (
 				<CircularProgress />
 			)
-		}
-		return (
+        }
+        return (
             <List>
                 {releases.map(item => {
+                    let fullArtistName = item.basic_information.artists.map(e => e.name).join(' / ');
                     return (
-                        <ListItem
-                            key={item.id}
-                            primaryText={item.basic_information.title}
-                            leftAvatar={
-                                <FontIcon className="muidocs-icon-communication-voicemail" />
-                            }
-                        />
-                    )
+                        <ListItem key={item.id}>
+                            <ListItemText
+                                primary={item.basic_information.title}
+                                secondary={fullArtistName}
+                            />
+                        </ListItem>
+                    );
                 })}
             </List>
-		);
+        );
 	}
 };
 

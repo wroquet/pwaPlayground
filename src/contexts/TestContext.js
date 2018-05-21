@@ -1,8 +1,8 @@
-import react from 'react';
+/* import react from 'react';
 
-const AuthContext = React.createContext();
+const TestContext = React.createContext(0);
 
-class AuthProvider extends React.Component {
+class TestProvider extends React.Component {
     state = { isAuth: false };
     render() {
         return (
@@ -13,7 +13,4 @@ class AuthProvider extends React.Component {
             </AuthContext.Provider>
         )
     }
-}
-
-const AuthConsumer = AuthContext.Consumer;
-export { AuthProvider, AuthConsumer }
+} */

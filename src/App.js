@@ -1,16 +1,33 @@
 import React from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import MyAwesomeReactComponent from './components/MyAwesomeReactComponent';
+
+// import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import {AppBar, Toolbar, Typography, FlatButton} from '@material-ui/core';
 import ListReleases from './components/ListReleases';
+// import Logged from './components/Logged';
+// import Login from './components/Login';
 
-const App = () => {
+class App extends React.Component {
+    constructor (props) {
+        super(props);
+        this.state = {
+            logged: true,
+        };
+    }
 
-    return (
-        <MuiThemeProvider>
-            <ListReleases />
-        </MuiThemeProvider>
-    );
-
+    render() {
+        return  (
+                <section>
+                    <AppBar position="static" color="primary">
+                        <Toolbar>
+                            <Typography variant="title" color="inherit">
+                                My discogs app
+                            </Typography>
+                        </Toolbar>
+                    </AppBar>
+                    <ListReleases />
+                </section>
+        );
+    };
 };
 
 export default App;
