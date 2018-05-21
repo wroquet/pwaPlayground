@@ -1,16 +1,10 @@
-/* import react from 'react';
+import React from 'react';
 
-const TestContext = React.createContext(0);
-
-class TestProvider extends React.Component {
-    state = { isAuth: false };
-    render() {
-        return (
-            <AuthContext.Provider
-                value={{ isAuth: this.state.isAuth }}
-            >
-                {this.props.children}
-            </AuthContext.Provider>
-        )
+const TestContext = React.createContext({
+    number: 0,
+    incrementNumber: () => {
+        console.log('TODO: increment number');
     }
-} */
+});
+
+export default TestContext;
